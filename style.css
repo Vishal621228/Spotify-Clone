@@ -1,0 +1,397 @@
+:root {
+    --black-lightest: #4d4d4d;
+    --black-light-grey: #3c3c3c;
+    --black-dark-grey: #1e1e1e;
+    --black-dark: #111111;
+    --black-darkest: #000000;
+}
+body {
+    font-family: "Montserrat", sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--black-darkest);
+    color: white;
+    overflow: hidden;
+}
+
+.main {
+    display: flex;
+    height: 100vh;
+    padding: 0.55rem;
+}
+
+.sidebar {
+    background-color: var(--black-darkest);
+    width: 320px;
+    border-radius: 1rem; /* 1rem = 16px*/
+    padding-right: 0.55rem;
+    padding-bottom: 0.55rem;
+    height: 68vh;
+}
+
+.main-content {
+    background: linear-gradient(to bottom, var(--black-light-grey), var(--black-dark-grey), var(--black-dark));
+    flex: 1;
+    border-radius: 1rem;
+    overflow: auto;
+    padding: 0.8rem;
+    height: 81.5vh;
+}
+
+.music-player {
+    background-color: var(--black-darkest);
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 10vh;
+    padding: 0.5rem;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.nav {
+    background-color: var(--black-dark-grey);
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+    height: 70px;
+    padding: 0.55rem;
+}
+
+.nav-option {
+    line-height: 2.5rem;
+    opacity: 0.7;
+    padding-left: 1.5rem;
+}
+
+.nav-option:hover {
+    opacity: 1;
+}
+
+.nav-option i {
+    font-size: 1.25rem;
+    margin-left: 0.55px;
+}
+
+.nav-option a {
+    font-size: 1rem;
+    margin-left: 1rem;
+}
+
+.library {
+    background-color: var(--black-dark-grey);
+    border-radius: 1rem;
+    height: 100%;
+    margin-top: 0.5rem;
+    padding: 0.5rem 0.75rem;
+}
+
+.options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.lib-option img {
+    height: 1.25rem;
+    width: 1.25rem;
+}
+
+.icons {
+    font-size: 1.25rem;
+    
+}
+
+
+.icons i {
+    margin-right: 1.5rem ;
+    opacity: 0.7;
+}
+
+.icons i:hover {
+    opacity: 1;
+}
+
+.box {
+    height: fit-content;
+    background-color: var(--black-light-grey);
+    border-radius: 0.75rem;
+    margin: 1rem 0 0.5rem 0;
+    padding: 1rem 1.25rem;
+    padding-bottom: 0.5rem;
+}
+
+.box-p1 {
+    font-size: 1rem;
+    font-weight: 600;
+    
+}
+
+.box-p2 {
+    font-size: 0.8rem;
+    opacity: 0.9;
+}
+
+.badge {
+    background-color: white;
+    border: none;
+    border-radius: 100px;
+    color: black;
+    padding: 0.2rem 1rem;
+    font-weight: 700; 
+    margin: 0.7rem 0;
+    height: 2.2rem;
+    transition: transform 0.2s ease;
+}
+
+.badge:hover {
+    transform: scale(1.1);
+}
+
+.sticky-nav {
+    top: 0;
+    position: sticky;
+    background-color: var(--black-dark-grey);
+    opacity: 0.8;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* padding-top: 1rem; */
+    border-radius: 10px;
+    z-index: 1000;
+    /* backdrop-filter: blur(10px); */
+}
+
+.nav-icons {
+    padding-left: 0.8rem;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.sticky-nav-options {
+    display: flex;
+    width: 300px;
+    justify-content: space-between;
+    margin-right: 1rem;
+}
+
+#user {
+    align-self: center;
+}
+
+#install {
+    color: whitesmoke;
+    background-color: var(--black-dark);
+}
+
+@media (max-width: 1000px) {
+    .hide {
+        display: none;
+    }.sticky-nav-options {
+        justify-content: end;
+        gap: 10px;
+    }
+}   
+
+.cards {
+    width: 100%;
+    margin: 35px 0;
+}
+
+.card {
+    background-color: var(--black-light-grey);
+    border-radius: 0.5rem;
+    padding: 1.1rem;
+    transition: all 0.2s ease-in ;
+    width: 33.33%;
+    max-width: 280px;
+}
+
+.card:hover {
+    transform: scale(1.02);
+    background-color: var(--black-dark-grey);
+}
+
+.card-container {
+    display: flex;
+    width: 100%;
+    max-height: 450px;
+    gap: 20px;
+}
+
+.card-img {
+    width: 100%;
+    height: 70%;
+    border-radius: 0.5rem;
+}
+
+.card-title {
+    font-weight: 600;
+}
+
+.card-info {
+    font-size: 1rem;
+    opacity: 0.5;
+}
+
+.footer {
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.line {
+    width: 90%;
+    height: 0;
+    border: 1px solid whitesmoke;
+    opacity: 0.2;
+}
+
+.music-player {
+    display: flex;
+}
+
+.album img {
+    height: 50px;
+    width: 50px;
+    border-radius: 5px;
+}
+
+.album {
+    display: flex;
+    width: 20%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.album-text {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    justify-content: center;
+    align-items: start;
+}
+
+.album-text .text-one {
+    font-size: 15px;
+    margin: 0;
+    font-weight: 500;
+}
+
+.album-text .text-two {
+    font-size: 10px;
+    margin: 0;
+    opacity: 0.5;
+    font-weight: 500;
+}
+
+.album-icons {
+    display: flex;
+}
+
+.album-icons i {
+    padding: 10px;
+    opacity: 0.7;
+}
+
+.album-icons i:hover {
+    opacity: 1;
+}
+
+.player-controls {
+    width: 22%;
+    height: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.player-controls img {
+    height: 1rem;
+    opacity: 0.6;
+}
+
+.player-controls img:hover {
+    opacity: 1;
+}
+
+#play {
+    opacity: 1; 
+    height: 2rem;
+    transition: transform 0.3s ease-in-out;
+}
+
+#play:hover {
+    transform: scale(1.2);
+}
+
+
+.player {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.player-bar {
+    display: flex;
+    width: 60%;
+    justify-content: center;
+    
+}
+
+.player-progress {
+    width: 60%;   
+    appearance: none;
+    background: transparent;
+}
+
+.controls {
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.controls i,input {
+    margin: 5px;
+    padding: 2px;
+}
+
+.controls input {
+    width: 40%;
+    margin-right: 5px;
+}
+
+.controls i {
+    opacity: 0.7;
+}
+
+.controls i:hover {
+    opacity: 1;
+}
+
+.player-progress::-webkit-slider-runnable-track {
+    background-color: #ddd;
+    border-radius: 100px;
+    height: 0.2rem;
+}
+
+.player-progress::-webkit-slider-thumb {
+    appearance: none;
+    height: 1rem;
+    width: 1rem;
+    background-color: rgb(35, 114, 35);
+    margin-top: -6px;
+    border-radius: 50%;
+
+}
